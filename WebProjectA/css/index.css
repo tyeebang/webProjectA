@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.all {
+    width: 1920px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+body {
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-color: lightblue;
+}
