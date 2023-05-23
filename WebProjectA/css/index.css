@@ -1,3 +1,5 @@
+/* all */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +8,275 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
 .all {
-    width: 1920px;
+    width: 1912px;
+    height: 5000px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
-body {
-    overflow-x:hidden;
-    overflow-y:auto;
-    background-color: lightblue;
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(55, 55, 55);
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.global_menu {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.global_menu > a {
+    width: 7%;
+}
+
+.global_menu img {
+    width: 100%;
+}
+
+.menu {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: rgb(55, 55, 55) 3px solid;
+    transition: .5s;
+}
+
+.menu a:hover {
+    border-bottom: red 3px solid;
+}
+
+.sign {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sign a {
+    color: lightgray;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/* section */
+
+section {
+    margin-top: 100px;
+}
+
+/* main slide */
+
+[name="slide"] {
+    display: none;
+}
+
+.main_slide {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main_slide img {
+    width: 1912px;
+    height: 880px;
+    filter: brightness(75%);
+}
+
+.main_slide .slide_list {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.main_slide .slide_item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .5s;
+}
+
+.main_slide .slide_item label {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+label.left {
+    left: 100px;
+    background-image: url('../img/arrow_left.jpg');
+    background-position: center center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+label.right {
+    right: 100px;
+    background-image: url('../img/arrow_right.jpg');
+    background-position: center center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+label.left:hover {
+    background-color: rgba(120, 120, 150, 0.5);
+}
+
+label.right:hover {
+    background-color: rgba(120, 120, 150, 0.5);
+}
+
+[id="slideA"]:checked ~ .slide_list .slide_item {
+    transform: translateX(0);
+}
+
+[id="slideB"]:checked ~ .slide_list .slide_item {
+    transform: translateX(-100%);
+}
+
+[id="slideC"]:checked ~ .slide_list .slide_item {
+    transform: translateX(-200%);
+}
+
+@keyframes slideA {
+    0% {
+        left: 0%;
+    }
+    23% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    48% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    73% {
+        left: -200%;
+    }
+    75% {
+        left: -100%;
+    }
+    98% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+[id="slideA"]:checked ~ .slide_list .slide_item {
+    transform: translateX(0);
+    animation: slideA 12s infinite;
+}
+
+@keyframes slideB {
+    0% {
+        left: 0%;
+    }
+    23% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    48% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    73% {
+        left: 0%;
+    }
+    75% {
+        left: 100%;
+    }
+    98% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+[id="slideB"]:checked ~ .slide_list .slide_item {
+    transform: translateX(-100%);
+    animation: slideB 12s infinite;
+}
+
+@keyframes slideC {
+    0% {
+        left: 0%;
+    }
+    23% {
+        left: 0%;
+    }
+    25% {
+        left: 100%;
+    }
+    48% {
+        left: 100%;
+    }
+    50% {
+        left: 200%;
+    }
+    73% {
+        left: 200%;
+    }
+    75% {
+        left: 100%;
+    }
+    98% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+[id="slideC"]:checked ~ .slide_list .slide_item {
+    transform: translateX(-200%);
+    animation: slideC 12s infinite;
 }
