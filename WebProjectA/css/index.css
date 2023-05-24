@@ -28,11 +28,11 @@ body {
 header {
     width: 100%;
     height: 100px;
-    background-color: rgb(55, 55, 55);
+    background-color: #11111f;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
-    z-index: 1;
+    z-index: 1000000;
     top: 0;
     left: 0;
     right: 0;
@@ -48,10 +48,10 @@ header {
 }
 
 .global_menu > a {
-    width: 7%;
+    width: 15%;
 }
 
-.global_menu img {
+.global_menu > a img {
     width: 100%;
 }
 
@@ -67,12 +67,12 @@ header {
     color: white;
     font-size: 22px;
     font-weight: bold;
-    border-bottom: rgb(55, 55, 55) 3px solid;
-    transition: .5s;
+    border-bottom: #11111f 3px solid;
+    transition: .75s;
 }
 
 .menu a:hover {
-    border-bottom: red 3px solid;
+    border-bottom: #ffc600 3px solid;
 }
 
 .sign {
@@ -84,7 +84,7 @@ header {
 }
 
 .sign a {
-    color: lightgray;
+    color: #ff8800;
     font-size: 14px;
     font-weight: bold;
 }
@@ -105,13 +105,22 @@ section {
 
 .main_slide {
     width: 100%;
+    height: 880px;
     margin: 0 auto;
 }
 
-.main_slide img {
+.slide_img {
     width: 1912px;
     height: 880px;
-    filter: brightness(75%);
+    filter: blur(5px);
+}
+
+section > img {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 300px;
+    z-index: 1;
 }
 
 .main_slide .slide_list {
@@ -120,7 +129,7 @@ section {
     overflow: hidden;
 }
 
-.main_slide .slide_item {
+.slide_item {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -129,20 +138,22 @@ section {
 }
 
 .main_slide .slide_item label {
-    width: 50px;
-    height: 100px;
+    width: 100px;
+    height: 200px;
     position: absolute;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
     padding: 20px;
     border-radius: 25%;
+    filter: saturate(50%) brightness(25%);
+    transition: .75s;
     cursor: pointer;
 }
 
 label.left {
     left: 100px;
-    background-image: url('../img/arrow_left.jpg');
+    background-image: url('../img/arrow_left.png');
     background-position: center center;
     background-size: 75%;
     background-repeat: no-repeat;
@@ -150,18 +161,18 @@ label.left {
 
 label.right {
     right: 100px;
-    background-image: url('../img/arrow_right.jpg');
+    background-image: url('../img/arrow_right.png');
     background-position: center center;
     background-size: 75%;
     background-repeat: no-repeat;
 }
 
 label.left:hover {
-    background-color: rgba(120, 120, 150, 0.5);
+    filter: saturate(100%) brightness(100%);
 }
 
 label.right:hover {
-    background-color: rgba(120, 120, 150, 0.5);
+    filter: saturate(100%) brightness(100%);
 }
 
 [id="slideA"]:checked ~ .slide_list .slide_item {
