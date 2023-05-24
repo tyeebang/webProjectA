@@ -48,7 +48,7 @@ header {
 }
 
 .global_menu > a {
-    width: 15%;
+    width: 20%;
 }
 
 .global_menu > a img {
@@ -115,11 +115,11 @@ section {
     filter: blur(5px);
 }
 
-section > img {
+.imgRb {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-    top: 300px;
+    top: 250px;
     z-index: 1;
 }
 
@@ -147,7 +147,7 @@ section > img {
     padding: 20px;
     border-radius: 25%;
     filter: saturate(50%) brightness(25%);
-    transition: .75s;
+    transition: .5s;
     cursor: pointer;
 }
 
@@ -191,26 +191,20 @@ label.right:hover {
     0% {
         left: 0%;
     }
-    23% {
+    30% {
         left: 0%;
     }
-    25% {
+    33% {
         left: -100%;
     }
-    48% {
+    63% {
         left: -100%;
     }
-    50% {
+    66% {
         left: -200%;
-    }
-    73% {
-        left: -200%;
-    }
-    75% {
-        left: -100%;
     }
     98% {
-        left: -100%;
+        left: -200%;
     }
     100% {
         left: 0%;
@@ -219,29 +213,23 @@ label.right:hover {
 
 [id="slideA"]:checked ~ .slide_list .slide_item {
     transform: translateX(0);
-    animation: slideA 12s infinite;
+    animation: slideA 15s infinite;
 }
 
 @keyframes slideB {
     0% {
         left: 0%;
     }
-    23% {
+    30% {
         left: 0%;
     }
-    25% {
+    33% {
         left: -100%;
     }
-    48% {
+    63% {
         left: -100%;
     }
-    50% {
-        left: 0%;
-    }
-    73% {
-        left: 0%;
-    }
-    75% {
+    66% {
         left: 100%;
     }
     98% {
@@ -254,29 +242,23 @@ label.right:hover {
 
 [id="slideB"]:checked ~ .slide_list .slide_item {
     transform: translateX(-100%);
-    animation: slideB 12s infinite;
+    animation: slideB 15s infinite;
 }
 
 @keyframes slideC {
     0% {
         left: 0%;
     }
-    23% {
+    30% {
         left: 0%;
     }
-    25% {
-        left: 100%;
-    }
-    48% {
-        left: 100%;
-    }
-    50% {
+    33% {
         left: 200%;
     }
-    73% {
+    63% {
         left: 200%;
     }
-    75% {
+    66% {
         left: 100%;
     }
     98% {
@@ -289,5 +271,5 @@ label.right:hover {
 
 [id="slideC"]:checked ~ .slide_list .slide_item {
     transform: translateX(-200%);
-    animation: slideC 12s infinite;
+    animation: slideC 15s infinite;
 }
