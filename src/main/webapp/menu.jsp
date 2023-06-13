@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resource/css/style.css">
 </head>
 <body>
-    <div class="all">
+    <div class="in_menu">
         <header>
             <ul class="global_menu">
                 <a href="index.jsp"><img src="resource/img/logo.png" alt="logo"></a>
@@ -50,6 +50,10 @@
                	%>
 			</div>
         </header>
+
+        <div class="inner_menu">
+            <img src="https://rolling-pasta.com/upload/menu/M_936189001679369468.png" alt="menu">
+        </div>
     </div>
     <script type="text/javascript" src="resource/js/main.js"></script>
 </body>

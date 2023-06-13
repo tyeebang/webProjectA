@@ -88,26 +88,12 @@ header {
     align-items: center;
 }
 
-.sign a{
+.sign a {
     color: #ff8800;
     font-size: 14px;
     font-weight: bold;
 }
 
-.logout {
-    color: #ff8800;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.userName {
-	position: absolute;
-	top: 40px;
-	right: 200px;
-    font-size: 14px;
-    font-weight: bold;
-}
 
 /* all section */
 
@@ -364,7 +350,7 @@ label.right:hover {
 }
 
 .pasta_menu_fir img:hover {
-    scale: 1.2;
+    scale: 1.25;
     z-index: 10000;
 }
 
@@ -635,7 +621,6 @@ footer {
 footer p {
     color: white;
 }
-
 
 /* brand */
 .intro {

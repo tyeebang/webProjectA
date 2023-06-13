@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resource/css/style.css">
 </head>
 <body>
-    <div class="all">
+    <div class="all_menu">
         <header>
             <ul class="global_menu">
                 <a href="index.jsp"><img src="resource/img/logo.png" alt="logo"></a>
