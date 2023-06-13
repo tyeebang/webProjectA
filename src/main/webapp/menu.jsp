@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>인프론트 메뉴 소개</title>
     <link rel="stylesheet" href="resource/css/style.css">
 </head>
 <body>
@@ -15,10 +15,9 @@
             <ul class="global_menu">
                 <a href="index.jsp"><img src="resource/img/logo.png" alt="logo"></a>
                 <div class="menu">
-                    <a href="#">BRAND</a>
+                    <a href="./brand.jsp">BRAND</a>
                     <a href="#">MENU</a>
-                    <a href="#">MEMBERSHIP</a>
-                    <a href="#">STORE</a>
+                    <a href="./membership.jsp">MEMBERSHIP</a>
                 </div>
                 <div class="sign">
                     <a href="#">클레임</a>

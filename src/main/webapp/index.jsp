@@ -18,10 +18,9 @@
                     <a href="./brand.jsp">BRAND</a>
                     <a href="./menu.jsp">MENU</a>
                     <a href="./membership.jsp">MEMBERSHIP</a>
-                    <a href="./store.jsp">STORE</a>
                 </div>
                 <div class="sign">
-                    <a href="./clame.jsp">클레임</a>
+                    <a href="#">클레임</a>
                     <%
 						String id = (String)session.getAttribute("logOK");
 					
@@ -37,7 +36,7 @@
 					<%
 						}
 					%>
-                    <a href="./sign.jsp">회원가입</a>
+                    <a href="#">회원가입</a>
                 </div>
             </ul>
 			<div class="userName">
@@ -77,7 +76,7 @@
                         <div>
                             <label for="slideB" class="left"></label>
                             <label for="slideA" class="right"></label>
-                            <a href="./store.jsp"><img src="./resource/img/slide_delivery.png" alt="slide_delivery" class="slide_img"></a>
+                            <a href="#"><img src="./resource/img/slide_delivery.png" alt="slide_delivery" class="slide_img"></a>
                             <img src="./resource/img/lunchBox.png" alt="logo_RB" class="box">
                         </div>
                     </li>

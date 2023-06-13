@@ -61,7 +61,7 @@ header {
 }
 
 .menu {
-    width: 600px;
+    width: 500px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -216,7 +216,7 @@ label.right:hover {
     filter: saturate(100%) brightness(100%);
 }
 
-/* slide들의 위치 선정 */
+/* slide�뱾�쓽 �쐞移� �꽑�젙 */
 [id="slideA"]:checked ~ .slide_list .slide_item {
     transform: translateX(0);
 }
@@ -229,7 +229,7 @@ label.right:hover {
     transform: translateX(-200%);
 } 
 
-/* slide 애니메이션 생성 */
+/* slide �븷�땲硫붿씠�뀡 �깮�꽦 */
 @keyframes slideA {
     0% {
         left: 0%;
@@ -254,13 +254,13 @@ label.right:hover {
     }
 }
 
-/* 라디오 버튼이 체크 되었을 때 slide의 움직임 */
+/* �씪�뵒�삤 踰꾪듉�씠 泥댄겕 �릺�뿀�쓣 �븣 slide�쓽 ��吏곸엫 */
 [id="slideA"]:checked ~ .slide_list .slide_item {
     transform: translateX(0);
     animation: slideA 15s infinite;
 }
 
-/* slide 애니메이션 생성 */
+/* slide �븷�땲硫붿씠�뀡 �깮�꽦 */
 @keyframes slideB {
     0% {
         left: 0%;
@@ -286,13 +286,13 @@ label.right:hover {
 }
 
 
-/* 라디오 버튼이 체크 되었을 때 slide의 움직임 */
+/* �씪�뵒�삤 踰꾪듉�씠 泥댄겕 �릺�뿀�쓣 �븣 slide�쓽 ��吏곸엫 */
 [id="slideB"]:checked ~ .slide_list .slide_item {
     transform: translateX(-100%);
     animation: slideB 15s infinite;
 }
 
-/* slide 애니메이션 생성 */
+/* slide �븷�땲硫붿씠�뀡 �깮�꽦 */
 @keyframes slideC {
     0% {
         left: 0%;
@@ -318,7 +318,7 @@ label.right:hover {
 }
 
 
-/* 라디오 버튼이 체크 되었을 때 slide의 움직임 */
+/* �씪�뵒�삤 踰꾪듉�씠 泥댄겕 �릺�뿀�쓣 �븣 slide�쓽 ��吏곸엫 */
 [id="slideC"]:checked ~ .slide_list .slide_item {
     transform: translateX(-200%);
     animation: slideC 15s infinite;
@@ -488,7 +488,7 @@ label.right:hover {
     margin-left: 100px;
 }
 
-/* js에서 사용할 애니메이션 생성 slide, A, B */
+/* js�뿉�꽌 �궗�슜�븷 �븷�땲硫붿씠�뀡 �깮�꽦 slide, A, B */
 @keyframes mySlide {
   from {
     left: -50px;
@@ -639,6 +639,7 @@ footer p {
 
 /* brand */
 .intro {
+	background-color: aliceblue;
     display: flex;
     justify-content: space-evenly;
     margin-top: 100px;
@@ -690,14 +691,164 @@ footer p {
 
 /* membership */
 .benefits {
-    background-color: blue;
-    width: 1000px;
-    margin-top: 100px;
+    position: absolute;
+    background-color: antiquewhite;
+    border: 2px solid #11111f;
+    width: 1200px;
+    height: 600px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(-50%) translateY(-25%);
+    top: 25%;
+    left: 50%;
 }
 
-.benefitss {
+.benefitsA {
     display: flex;
-    
+    justify-content: space-around;
+    border: 2px solid #11111f;
+    width: 1050px;
+    height: 300px;
+}
+
+hr {
+    border: 1px solid #11111f;
+}
+
+.bene_step {
+    width: 350px;
+    border-left: 1px solid #11111f;
+    border-right: 1px solid #11111f;
+}
+
+.benefits h1 {
+    color: #11111f;
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+.benefits h3 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wel {
+    color: red;
+    text-shadow: 1px 1px 5px black;
+}
+
+.sil {
+    color: silver;
+    text-shadow: 1px 1px 5px black;
+}
+
+.gol {
+    color: gold;
+    text-shadow: 1px 1px 5px black;
+}
+
+.benefits li {
+    color: #572400;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.benefits ul {
+    margin-top: 20px;
+}
+
+.benefits p {
+    color: darkslategray;
+}
+
+.bene_but {
+	position: absolute;
+	top: 875px;
+	left: 355px;
+    color: #343434;
+    font-weight: bold;
+    border: 2px solid #343434;
+    background-color: antiquewhite;
+    width: 125px;
+    height: 40px;
+    border-radius: 15px;
+    position: absolute;
+    transition: .75s all;
+}
+
+.bene_but:hover {
+    color: #343434;
+    border: 2px solid #343434;
+    background-color: #ffc600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bene_h1 {
+	position: absolute;
+	font-size: 54px;
+	color: black;
+	top: 125px;
+	left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+}
+
+/* login */
+.login_section {
+	align-items: center;
+	position: absolute;
+	top: 400px;
+	left: 50%;
+	padding: 30px 60px;
+    transform: translateX(-50%);
+	border: 1px solid gray;
+	
+}
+
+.login_section p {
+	color: black;
+}
+
+.log_form {
+	display: flex;
+	justify-content: space-between;
+	width: 440px;
+	height: 100px;
+}
+
+.log_div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.log_form input[type=text] {
+	width: 300px;
+	height: 40px;
+	border: 1px solid gray;
+}
+
+.log_form input[type=password] {
+	width: 300px;
+	height: 40px;
+	border: 1px solid gray;
+}
+
+input[type=submit]  {
+	font-size: 24px;
+	background-color: red;
+	color: white;
+	border: none;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.log_hr {
+	margin: 25px 0px;
 }
