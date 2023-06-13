@@ -21,6 +21,13 @@ body {
     margin: 0 auto;
 }
 
+.all_menu {
+    width: 1920px;
+    height: 969px;
+    display: flex;
+    margin: 0 auto;
+}
+
 /* header */
 
 header {
@@ -81,12 +88,26 @@ header {
     align-items: center;
 }
 
-.sign a {
+.sign a{
     color: #ff8800;
     font-size: 14px;
     font-weight: bold;
 }
 
+.logout {
+    color: #ff8800;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.userName {
+	position: absolute;
+	top: 40px;
+	right: 200px;
+    font-size: 14px;
+    font-weight: bold;
+}
 
 /* all section */
 
@@ -195,7 +216,7 @@ label.right:hover {
     filter: saturate(100%) brightness(100%);
 }
 
-/* slide들의 위치 선정 */
+/* slide�뱾�쓽 �쐞移� �꽑�젙 */
 [id="slideA"]:checked ~ .slide_list .slide_item {
     transform: translateX(0);
 }
@@ -208,7 +229,7 @@ label.right:hover {
     transform: translateX(-200%);
 } 
 
-/* slide 애니메이션 생성 */
+/* slide �븷�땲硫붿씠�뀡 �깮�꽦 */
 @keyframes slideA {
     0% {
         left: 0%;
@@ -233,13 +254,13 @@ label.right:hover {
     }
 }
 
-/* 라디오 버튼이 체크 되었을 때 slide의 움직임 */
+/* �씪�뵒�삤 踰꾪듉�씠 泥댄겕 �릺�뿀�쓣 �븣 slide�쓽 ��吏곸엫 */
 [id="slideA"]:checked ~ .slide_list .slide_item {
     transform: translateX(0);
     animation: slideA 15s infinite;
 }
 
-/* slide 애니메이션 생성 */
+/* slide �븷�땲硫붿씠�뀡 �깮�꽦 */
 @keyframes slideB {
     0% {
         left: 0%;
@@ -265,13 +286,13 @@ label.right:hover {
 }
 
 
-/* 라디오 버튼이 체크 되었을 때 slide의 움직임 */
+/* �씪�뵒�삤 踰꾪듉�씠 泥댄겕 �릺�뿀�쓣 �븣 slide�쓽 ��吏곸엫 */
 [id="slideB"]:checked ~ .slide_list .slide_item {
     transform: translateX(-100%);
     animation: slideB 15s infinite;
 }
 
-/* slide 애니메이션 생성 */
+/* slide �븷�땲硫붿씠�뀡 �깮�꽦 */
 @keyframes slideC {
     0% {
         left: 0%;
@@ -297,7 +318,7 @@ label.right:hover {
 }
 
 
-/* 라디오 버튼이 체크 되었을 때 slide의 움직임 */
+/* �씪�뵒�삤 踰꾪듉�씠 泥댄겕 �릺�뿀�쓣 �븣 slide�쓽 ��吏곸엫 */
 [id="slideC"]:checked ~ .slide_list .slide_item {
     transform: translateX(-200%);
     animation: slideC 15s infinite;
@@ -343,7 +364,7 @@ label.right:hover {
 }
 
 .pasta_menu_fir img:hover {
-    scale: 1.25;
+    scale: 1.2;
     z-index: 10000;
 }
 
@@ -467,7 +488,7 @@ label.right:hover {
     margin-left: 100px;
 }
 
-/* js에서 사용할 애니메이션 생성 slide, A, B */
+/* js�뿉�꽌 �궗�슜�븷 �븷�땲硫붿씠�뀡 �깮�꽦 slide, A, B */
 @keyframes mySlide {
   from {
     left: -50px;
@@ -613,4 +634,131 @@ footer {
 
 footer p {
     color: white;
+}
+
+
+/* brand */
+.intro {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    width: 1920px;
+    align-items: center;
+}
+
+.intro_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.intro img {
+    height: 800px;
+}
+
+.intro h1 {
+    font-family: serif;
+    font-size: 64px;
+    text-align: center;
+}
+
+.intro p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* menu */
+.in_menu {
+    width: 1912px;
+    height: 1700px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.inner_menu {
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.inner_menu img {
+    left: 50%;
+}
+
+/* membership */
+.benefits {
+    position: absolute;
+    background-color: antiquewhite;
+    border: 2px solid gray;
+    width: 1200px;
+    height: 600px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(-50%) translateY(-25%);
+    top: 25%;
+    left: 50%;
+}
+
+.benefitsA {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid gray;
+    width: 1050px;
+    height: 300px;
+}
+
+hr {
+    border: 1px solid gray;
+}
+
+.bene_step {
+    width: 350px;
+    border-left: 1px solid gray;
+}
+
+.benefits h1 {
+    color: #11111f;
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+.benefits h3 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wel {
+    color: red;
+    text-shadow: 1px 1px 5px black;
+}
+
+.sil {
+    color: silver;
+    text-shadow: 1px 1px 5px black;
+}
+
+.gol {
+    color: gold;
+    text-shadow: 1px 1px 5px black;
+}
+
+.benefits li {
+    color: #572400;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.benefits ul {
+    margin-top: 20px;
+}
+
+.benefits p {
+    color: darkslategray;
 }
